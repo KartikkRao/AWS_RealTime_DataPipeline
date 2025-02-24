@@ -62,7 +62,7 @@ This setup ensures that all services communicate securely within the VPC while a
    -> Created an ECS cluster inside which spinning up a service running the task <br>
    -> Very scalable since service can increase and decrease the number of tasks so depending upon number of partitions you can set number of tasks <br>
    -> Data is consumed and stored in Kinesis Friehose <br>
-8) Kinesis Firehose:
+8) Kinesis Firehose: <br>
    -> Main purpose is to reduce S3 api calls we dont want to just post each message individually to 3 as it is read so firehose batches it and sends them <br>
    -> can connect with lambda if your data need transformations (skipped this in my project since my data is simple also can be cleaner or transformed later) <br>
    -> can be configured such that the data being sent to s3 can use schema from glue and save files as parquet inbuilt feature of firehose, compression is also           possible instead eg: .json.gzip <br>
