@@ -18,13 +18,13 @@ I built a real-time data pipeline using AWS VPC, AWS Managed Streaming for Apach
 Let me walk you through the flow! ⬇️
 
 🏗️ Architecture Setup (VPC & Networking): <br>
--> Implemented my own VPC for advance security
--> 2 private subnets (AWS msk, lambda, ecs running in these) in different availability zones ap-south-1a, ap-south-1b
--> 2 public subnets each in one availability zone
--> 2 Route tables one for public subnets and another for private
--> internet gateway for 0.0.0.0/0 through igw
--> NAT gateway using one public subnet which is inside the public route table so that NAT can access internet (allocate elastic ip while creating)
--> Used this NAT gateway in private route table for internet access
+-> Implemented my own VPC for advance security <br>
+-> 2 private subnets (AWS msk, lambda, ecs running in these) in different availability zones ap-south-1a, ap-south-1b <br>
+-> 2 public subnets each in one availability zone <br>
+-> 2 Route tables one for public subnets and another for private <br>
+-> internet gateway for 0.0.0.0/0 through igw <br>
+-> NAT gateway using one public subnet which is inside the public route table so that NAT can access internet (allocate elastic ip while creating) <br>
+-> Used this NAT gateway in private route table for internet access <br>
 
 This setup ensures that all services communicate securely within the VPC while accessing the internet only when necessary!
 
