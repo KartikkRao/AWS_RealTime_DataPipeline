@@ -17,7 +17,7 @@ I built a real-time data pipeline using AWS VPC, AWS Managed Streaming for Apach
 
 Let me walk you through the flow! ⬇️
 
-🏗️ Architecture Setup (VPC & Networking):
+🏗️ Architecture Setup (VPC & Networking): <br>
 -> Implemented my own VPC for advance security
 -> 2 private subnets (AWS msk, lambda, ecs running in these) in different availability zones ap-south-1a, ap-south-1b
 -> 2 public subnets each in one availability zone
