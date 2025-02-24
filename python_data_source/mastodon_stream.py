@@ -6,7 +6,7 @@ from datetime import datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-API_GATEWAY_URL = "https://erleztd6fi.execute-api.ap-south-1.amazonaws.com/dev_updated"
+API_GATEWAY_URL = "Your_Gateway_Url"
 
 def strip_html(html):
     return BeautifulSoup(html, "html.parser").get_text()
@@ -62,7 +62,8 @@ class MyListener(StreamListener):
                 }
 
                 headers = {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "x_api_key": "Your_key"  # Have to configure this in api gateway optional (if not created dont use this parameter)
                 }
 
                 response = requests.post(API_GATEWAY_URL, headers=headers, json=sqs_message)
@@ -76,11 +77,11 @@ class MyListener(StreamListener):
             print(f"Error processing post: {e}")
 
 mastodon = Mastodon(
-    access_token="zhF9BqNlmt8S9bj9CsOtQehB5YLAPQLCpdhrBzOn5XY",
+    access_token="Generate_through_your_account",
     api_base_url="https://mastodon.social"
 )
 
-# Run the stream with hashtag filtering
+# Run the stream this will keep polling for live posts and its data
 mastodon.stream_public(
     listener=MyListener(),
     local=False,
