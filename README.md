@@ -1,10 +1,15 @@
 # AWS_RealTime_DataPipeline
 
-Considerations:
+Considerations: 
+
 -> AWS roles and configs set those up as in when you create services and give permisiions accordingly 
+
 -> Used references:
+
     1) kafka-python module: https://kafka-python.readthedocs.io/en/master/index.html
+    
     2) aws-glue-schema-registry: https://pypi.org/project/aws-glue-schema-registry/
+    
 -> Add layers to your lambda code for modules to work 
 
 Project Overview:
