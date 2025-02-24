@@ -1,0 +1,77 @@
+{
+  "type": "record",
+  "name": "PostSchema",
+  "namespace": "com.posts",
+  "fields": [
+    {
+      "name": "post_id",
+      "type": "long"
+    },
+    {
+      "name": "created_at",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "language",
+      "type": ["string", "null"],
+      "default": "en"
+    },
+    {
+      "name": "content",
+      "type": ["string", "null"],
+      "default": "Not Specified"
+    },
+    {
+      "name": "url",
+      "type": ["string", "null"],
+      "default": "Not Specified"
+    },
+    {
+      "name": "username",
+      "type": ["string", "null"],
+      "default": "Not Specified"
+    },
+    {
+      "name": "display_name",
+      "type": ["string", "null"],
+      "default": "Not Specified"
+    },
+    {
+      "name": "followers_count",
+      "type": ["int","null"],
+      "default": 0
+    },
+    {
+      "name": "following_count",
+      "type": ["int","null"],
+      "default": 0
+    },
+    {
+      "name": "statuses_count",
+      "type": ["int","null"],
+      "default": 0
+    },
+    {
+      "name": "tags",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": []
+    },
+    {
+      "name": "application",
+      "type": ["string", "null"],
+      "default": "Unknown"
+    },
+    {
+      "name": "media_attachments",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": []
+    }
+  ]
+}
